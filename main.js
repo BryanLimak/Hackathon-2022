@@ -4,6 +4,7 @@ var formats = ['png','jpeg','pdf','jpg']
 var file
 var nameFile
 var cuantidadArchivos = 0
+var formatAccepted = 0
 function dropHandler(ev) {
   
     // Impedir o comportamento padrão (impedir que o arquivo seja aberto)
@@ -14,8 +15,9 @@ function dropHandler(ev) {
 
       for (var i = 0; i < ev.dataTransfer.items.length; i++) {
         cuantidadArchivos ++
-        if (cuantidadArchivos > 5){
-            alert('Limite de archivos superado ! (5 archivos)')
+        if (cuantidadArchivos > 3){
+            alert('Limite de archivos superado ! (3 archivos)')
+            return
         }
         // Se os itens soltos não forem arquivos, rejeite-os
         if (ev.dataTransfer.items[i].kind === 'file') {
@@ -28,6 +30,17 @@ function dropHandler(ev) {
             $('.container-archivo').append('<div class="archivo grid content-center col-span-asdasdasdasd mx-5"><i id="icono-upload-box" class="text-[#56489c] fa-solid fa-file text-5xl mb-4 "></i><p id="statusArchivo" class="text-white text-xl">'+nameFile+'</p></div>')
 
         }
+
+
+
+        formats.forEach(element => {
+            let format = nameFile.split('.');
+            if (element == format[format.length - 1]) {
+                formatAccepted++
+            }
+            
+        });
+
       }
     } else {
       // Use a interface DataTransfer para acessar o (s) arquivo (s)
@@ -38,14 +51,8 @@ function dropHandler(ev) {
   }
 
   function enviarArchivos(){
-    let format = nameFile.split('.');
-    var formatAccepted = 0
 
-    formats.forEach(element => {
-        if (element == format[format.length - 1]) {
-            formatAccepted++
-        }
-    });
+
     
     console.log(cuantidadArchivos);
     console.log(formatAccepted);
