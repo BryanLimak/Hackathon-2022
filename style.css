@@ -1,0 +1,37 @@
+
+*{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+}
+
+body{
+    background-color: #130f26;
+}
+
+.shadow-drop{
+    box-shadow: 0px 0px 31px 8px #528565;
+}
+
+.centralizar-bienvenida{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+
+.img-google{
+    background-image: url('images/logo.png');
+    background-position: 5%;
+    background-size:  50px 40px;
+    background-repeat: no-repeat;`
+}
+
+.icono-drop{
+    background-image: url('/images/drop.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}

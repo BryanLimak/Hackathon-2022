@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@200;300;400;500&family=Potta+One&family=Press+Start+2P&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>  
+        <div class="w-[95%] m-auto grid grid-cols-6 mt-[2%] h-[800px]">
+            <section class="section-left container  col-span-4 ">
+                <div class="drop-zone bg-[#130f26] mt-[2%] w-[90%] h-[680px] shadow-drop rounded-md icono-drop">
+
+                </div>
+                <button class="w-[90%] mt-[8%] bg-[#569b51] hover:bg-[#61a35e] text-white   py-2 px-4 border-b-4 border-[#375f34] hover:border-[#416d3e] rounded">
+                    Subir archivos
+                </button>
+            </section>
+            <section class="section-left container   col-span-2">
+                <div class="infos">
+                    <div class="bien-venido mt-[5%] w-[90%] h-[680px] m-auto">
+                        <div class="centralizar-bienvenida text-center w-[90%] m-auto">
+                            <div class="titulo text-4xl text-white font-light">
+                                Bienvenido a DDrop
+                            </div>
+                            <div class="parafo text-white text-left mt-4 text-xl border-b-[3px] border-[#646669] pb-14">
+                                Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Goolge.
+                            </div>
+                            <button class="bg-[#130f26] img-google hover:bg-[#352c5e] text-white p-4 border-2 font-light border-white rounded w-full mt-14">
+                                Login con Google
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Example of a form that Dropzone can take over -->
+        <!-- <form action="/target" class="dropzone"></form> -->
+</body>
+
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    
+</html>
