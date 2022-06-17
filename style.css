@@ -12,7 +12,7 @@ body{
     box-shadow: 0px 0px 31px 8px #528565;
 }
 
-.centralizar-bienvenida{
+.centralizar{
     position: relative;
     top: 50%;
     transform: translateY(-50%);
@@ -25,7 +25,7 @@ body{
 .img-google{
     background-image: url('images/logo.png');
     background-position: 5%;
-    background-size:  50px 40px;
+    background-size:  10% ;
     background-repeat: no-repeat;`
 }
 
@@ -35,3 +35,5 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+
+
