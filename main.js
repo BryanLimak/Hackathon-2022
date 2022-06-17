@@ -16,6 +16,7 @@ function dropHandler(ev) {
       for (var i = 0; i < ev.dataTransfer.items.length; i++) {
         cuantidadArchivos ++
         if (cuantidadArchivos > 3){
+            cuantidadArchivos = 3
             alert('Limite de archivos superado ! (3 archivos)')
             return
         }
