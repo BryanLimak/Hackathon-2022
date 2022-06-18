@@ -99,5 +99,5 @@ function reset() {
 }
 
 function redirect() {
-    window.location.href = "/dropzone.html";
+    window.location.href = "dropzone.html";
 }
