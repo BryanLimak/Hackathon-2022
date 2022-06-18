@@ -1,73 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@200;300;400;500&family=Potta+One&family=Press+Start+2P&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a7ee2ea52b.js" crossorigin="anonymous"></script>
-    <title>Document</title>
-</head>
-<body>  
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+            type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@200;300;400;500&family=Potta+One&family=Press+Start+2P&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a7ee2ea52b.js"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body class="icono-drop bg-[#130f26]">
 
-        <div class="w-[95%] m-auto grid grid-cols-6 mt-[2%] h-[800px]">
-            <section class="section-left container  col-span-4 ">
-  
-                    <div class="drop-zone bg-[#130f26] mt-[2%] w-[90%] h-[680px] shadow-drop rounded-md icono-drop" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);">
-                        <div class="status-drop centralizar m-auto w-[70%] text-center text-3xl">
-                            <i id="icono-upload-ok" class="text-[#569b51] fa-solid fa-check text-7xl mb-4 hidden"></i>
-                            <i id="icono-upload" class="text-white fa-solid fa-arrow-up-from-bracket text-5xl mb-4 animate-bounce"></i>
-                            <p id="info-arrastrar" class="text-white ">Arrastra tus archivos aquí </p>
-                            
-                            <div class="container-archivo flex justify-center mt-10 ">  
-                            </div>
-                            
-                        </div>
-                        <div class="alerta-error w-[50%]  relative  m-auto bg-[#232730] rounded-md p-12 hidden">
-                            <h3 class="text-white text-3xl font-normal">Ups,algo ha ido mal!</h3>
-                            <p class="text-[#ffffffc5] font-light mt-[8%]">No hemos podido subir tu archivo, revisa el formato o bien inténtalo de nuevo.</p>
-                            <button onclick="cerrarError()" class="w-[50%]  mt-[5%] bg-[#569b51] hover:bg-[#61a35e] text-white font-medium py-2 px-4 text-lg rounded">
-                                cerrar
-                            </button>
-                        </div>
-                    </div>
-                    <button onclick="enviarArchivos()" class="w-[90%] mt-[8%] bg-[#569b51] hover:bg-[#61a35e] text-white font-medium py-3 px-4 text-lg rounded">
-                        Subir archivos
-                    </button>
- 
-            </section>
-            <section class="section-left container   col-span-2">
-                <div class="infos">
-                    <div class="bien-venido mt-[5%] w-[90%] h-[680px] m-auto">
-                        <div class="centralizar text-center w-[90%] m-auto">
-                            <div class="titulo text-4xl text-white font-light">
-                                Bienvenido a DDrop
-                            </div>
-                            <div class="parafo text-white text-left mt-4 text-xl border-b-[3px] border-[#646669] pb-14">
-                                Para subir tus archivos de forma simple a drive, puedes hacer Login a través de Goolge.
-                            </div>
-                            <button class="bg-[#130f26] img-google hover:bg-[#352c5e] text-white text-xl p-3 border-2 font-light border-white rounded w-full mt-14">
-                                Login con Google
-                            </button>
-                        </div>
-                    </div>
+        <div class="min-h-full flex items-center justify-center py-16
+            px-4 sm:px-4 w-[80%] md:w-[60%] xl:w-[40%] 2xl:w-[35%] m-auto
+            rounded-md shadow-drop mt-[25%] md:mt-[12%] bg-[#130f26]">
+            <div class="max-w-md w-full">
+                <div>
+                    <i class="text-white fa-solid fa-arrow-up-from-bracket flex
+                        justify-center text-5xl mx-auto h-12 w-auto"></i>
+                    <h2 class="mt-6 text-center text-3xl font-extrabold
+                        text-white">Iniciar sesión</h2>
                 </div>
-            </section>
-        </div>
+                <form class="mt-8 space-y-6" action="#" method="POST">
+                    <input type="hidden" name="remember" value="true">
+                    <div class="rounded-md shadow-sm -space-y-px">
+                        <div>
+                            <label for="email-address" class="sr-only">Correo
+                                electrónico</label>
+                            <input id="email-address" name="email" type="email"
+                                autocomplete="email" class="appearance-none
+                                rounded-none relative block w-full px-3 py-2
+                                border border-gray-300 placeholder-gray-500
+                                text-gray-900 rounded-t-md focus:outline-none
+                                focus:z-10 sm:text-sm" placeholder="Correo electrónico">
+                        </div>
+                        <div>
+                            <label for="password" class="sr-only">Contraseña</label>
+                            <input id="password" name="password" type="password"
+                                autocomplete="current-password"
+                                class="appearance-none rounded-none relative
+                                block w-full px-3 py-2 border border-gray-300
+                                placeholder-gray-500 text-gray-900 rounded-b-md
+                                focus:outline-none focus:z-10 sm:text-sm"
+                                placeholder="Contraseña">
+                        </div>
+                    </div>
 
-</body>
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center">
+                            <input id="remember-me" name="remember-me"
+                                type="checkbox" class="h-4 w-4 text-white
+                                border-gray-300 rounded">
+                            <label for="remember-me" class="ml-2 block text-sm
+                                text-white">Recordarme</label>
+                        </div>
 
-    <script
-    src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
-    crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="main.js"></script>
-    <script type=“text/javascript” src=“jquery-ui/jquery-ui.min.js”></script>
-    
-</html>
+                    </div>
+
+                    <div>
+
+                        <div onclick="redirect()" class="group relative w-full
+                            flex justify-center py-2 px-4 border
+                            border-transparent text-sm font-medium rounded
+                            text-white bg-[#569b51] hover:bg-[#61a35e]
+                            cursor-pointer focus:outline-none focus:ring-2
+                            focus:ring-offset-2">
+                            <span class="absolute left-0 inset-y-0 flex
+                                items-center pl-3">
+                                <!-- Heroicon name: solid/lock-closed -->
+                                <svg class="h-5 w-5 text-white"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd" d="M5 9V7a5 5 0
+                                        0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2
+                                        2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3
+                                        0 016 0z" clip-rule="evenodd" />
+                                    </svg>
+                                </span>
+                                Iniciar sesión
+                            </div>
+
+
+                            <a href="/registrar.html" class="font-medium text-white
+                                text-left">
+                                <div class="bg-[#130f26] hover:bg-[#352c5e]
+                                    text-white text-xl p-2 border-2 font-light
+                                    border-white rounded w-full text-center mt-4">
+                                    Registro
+                                </div>
+                            </a>
+
+
+                        </div>
+                </form>
+               
+            </div>
+        </body>
+
+        <script
+            src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="main.js"></script>
+        <script type=“text/javascript” src=“jquery-ui/jquery-ui.min.js”></script>
+    </html>

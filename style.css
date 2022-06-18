@@ -5,7 +5,6 @@
 }
 
 body{
-    background-color: #130f26;
 }
 
 .shadow-drop{
@@ -32,7 +31,6 @@ body{
 .icono-drop{
     background-image: url('images/drop.png');
     background-size: contain;
-    background-repeat: no-repeat;
     background-position: center;
 }
 

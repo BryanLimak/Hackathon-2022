@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet"
+            href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css"
+            type="text/css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Montserrat:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@200;300;400;500&family=Potta+One&family=Press+Start+2P&family=Roboto+Mono:wght@500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap"
+            rel="stylesheet">
+        <script src="https://kit.fontawesome.com/a7ee2ea52b.js"
+            crossorigin="anonymous"></script>
+        <title>Document</title>
+    </head>
+    <body class="icono-drop bg-[#130f26]">
+        <div class="min-h-full flex items-center justify-center py-16 px-4
+            sm:px-4 w-[80%] md:w-[60%] xl:w-[40%] 2xl:w-[35%] m-auto rounded-md
+            shadow-drop mt-[15%] md:mt-[7%] bg-[#130f26]">
+            <div class="w-[80%] mx-auto my-12">
+                <h1 class="text-2xl font-bold w-full text-center text-white">Registrarse</h1>
+                <form class="flex flex-col mt-4">
+                    <input
+                        type="text"
+                        name="full-name"
+                        class="px-4 py-3 w-full rounded-md font-normal
+                        bg-gray-100 border-transparent focus:border-gray-500
+                        focus:bg-white focus:ring-0 text-sm"
+                        placeholder="Nombre"
+                        />
+                    <input
+                        type="email"
+                        name="email"
+                        class="px-4 py-3 mt-4 w-full rounded-md font-normal
+                        bg-gray-100 border-transparent focus:border-gray-500
+                        focus:bg-white focus:ring-0 text-sm"
+                        placeholder="Correo eletrónico"
+                        />
+                    <input
+                        type="password"
+                        name="password"
+                        class="px-4 py-3 mt-4 w-full rounded-md font-normal
+                        bg-gray-100 border-transparent focus:border-gray-500
+                        focus:bg-white focus:ring-0 text-sm"
+                        placeholder="Contraseña"
+                        />
+                    <input
+                        type="password"
+                        name="repeat-password"
+                        class="px-4 py-3 mt-4 w-full rounded-md font-normal
+                        bg-gray-100 border-transparent focus:border-gray-500
+                        focus:bg-white focus:ring-0 text-sm"
+                        placeholder="Repetir contraseña"
+                        />
+                    <button
+                        type="submit"
+                        class="mt-4 px-4 py-3 leading-6 text-base rounded-md
+                        border border-transparent text-white hover:text-white
+                        bg-[#569b51] hover:bg-[#61a35e] focus:ring-offset-2
+                        cursor-pointer inline-flex items-center w-full
+                        justify-center font-medium focus:outline-none">
+                        Registrarse
+                    </button>
+                    <div class="flex flex-col items-center mt-5">
+                        <p class="mt-1 text-xs font-light text-gray-400">
+                            ¿Ya tienes una cuenta?<a href="/index.html"
+                                class="ml-1 font-medium text-[#569b51]
+                                cursor-pointer">iniciar sesión</a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="main.js"></script>
+    <script type=“text/javascript” src=“jquery-ui/jquery-ui.min.js”></script>
+</html>

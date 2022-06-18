@@ -33,7 +33,7 @@ function dropHandler(ev) {
                 nameFile = file.name;
                 $('#icono-upload').hide()
                 $('#info-arrastrar').html('Listado de archivos')
-                $('.container-archivo').append('<div class="archivo grid content-center col-span-asdasdasdasd mx-5"><i id="icono-upload-box" class="text-[#56489c] fa-solid fa-file text-5xl mb-4 "></i><p id="statusArchivo" class="text-white text-xl">'+nameFile+'</p></div>')
+                $('.container-archivo').append('<div class="archivo grid content-center mb-4 md:mb-0 col-span-asdasdasdasd mx-5"><i id="icono-upload-box" class="text-[#56489c] fa-solid fa-file text-4xl lg:text-5xl mb-4 "></i><p id="statusArchivo" class="text-white text-sm">'+nameFile+'</p></div>')
             }
             formats.forEach(element => {
                 let format = nameFile.split('.');
@@ -98,3 +98,6 @@ function reset() {
     block = false
 }
 
+function redirect() {
+    window.location.href = "/dropzone.html";
+}
